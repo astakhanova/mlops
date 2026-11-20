@@ -27,7 +27,7 @@ FEATURE_COLS = ["rooms", "area", "floor", "total_floors"]
 # Гиперпараметры (для Ridge; для чистого LinearRegression игнорируются)
 PARAMS = {
     "model": "ridge",          # "linear" | "ridge"
-    "alpha": 1.0,              # только для ridge
+    "alpha": 100,              # только для ridge
     "test_size": 0.2,
     "random_state": 42,
     "log_target": True,        # обучать на log(price) — цена скошена вправо
@@ -172,4 +172,3 @@ def train():
 
 if __name__ == "__main__":
     train()
-    
